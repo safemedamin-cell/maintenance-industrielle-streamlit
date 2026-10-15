@@ -299,14 +299,14 @@ def main() -> None:
         )
 
     st.subheader("6. Action de maintenance prioritaire")
-    top_equipment_cause = (
+    top_equipment_causes = (
         filtered[filtered["Équipement"] == top_equipment["Équipement"]]
         .groupby("Cause")["Arrêt machine (h)"]
         .sum()
         .sort_values(ascending=False)
-        .iloc[0]
     )
-    top_cause_name = top_equipment_cause.name
+    top_cause_name = top_equipment_causes.index[0]
+    top_equipment_cause = top_equipment_causes.iloc[0]
     st.success(
         f"Prioriser un plan de réduction des arrêts correctifs sur {top_equipment['Équipement']}, "
         f"avec un diagnostic ciblé sur la cause « {top_cause_name} ». "
