@@ -13,7 +13,11 @@ st.set_page_config(
 )
 
 
-DATA_PATH = Path(__file__).parent / "data" / "05_Ingenierie_Industrie.xlsx"
+DATA_CANDIDATES = [
+    Path(__file__).parent / "data" / "05_Ingenierie_Industrie.xlsx",
+    Path(__file__).parent / "05_Ingenierie_Industrie.xlsx",
+]
+DATA_PATH = next((candidate for candidate in DATA_CANDIDATES if candidate.exists()), DATA_CANDIDATES[0])
 
 
 @st.cache_data

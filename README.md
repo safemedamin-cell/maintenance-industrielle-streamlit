@@ -5,7 +5,7 @@ Application Streamlit construite à partir de l’onglet `Données` du classeur 
 ## Contenu
 
 - `app.py` : interface Streamlit, calculs pandas et graphiques matplotlib.
-- `data/05_Ingenierie_Industrie.xlsx` : source embarquée pour permettre l’exécution sur Streamlit Community Cloud.
+- `data/05_Ingenierie_Industrie.xlsx` ou `05_Ingenierie_Industrie.xlsx` : source embarquée pour permettre l’exécution sur Streamlit Community Cloud.
 - `requirements.txt` : dépendances nécessaires au déploiement.
 
 ## Exécution locale
